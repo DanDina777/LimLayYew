@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lim Lay Yew - Digital Legacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Crimson+Text:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Fixed Header -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="avatar-circle">G</div>
+          <h1 class="site-title">Lim Lay Yew</h1>
+        </div>
+        <nav class="main-navigation">
+          <a href="#story" class="nav-link">Life Story</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#memories" class="nav-link">Memories</a>
+        </nav>
+        <button class="private-entry-btn" onclick="openLoginModal()">
+          Private Entry
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-badge">
+          <span class="badge-text">Digital Legacy</span>
+        </div>
+        <h1 class="hero-title">A Digital Memoir & Shared Memory Book</h1>
+        <p class="hero-description">
+          Preserve precious memories, share life stories, and create a lasting
+          legacy for future generations to cherish and remember.
+        </p>
+        <div class="hero-buttons">
+          <button
+            class="primary-btn"
+            onclick="window.location.href='life-story.html'"
+          >
+            View Life Story
+          </button>
+          <button class="secondary-btn" onclick="openMemoryModal()">
+            Leave a Memory
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Life Story Chapters -->
+    <section id="story" class="chapters-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Life Chapters</span>
+          <h2 class="section-title">Build with your life context</h2>
+          <p class="section-description">
+            Organize your memories into meaningful chapters that tell the
+            complete story of your life journey.
+          </p>
+        </div>
+        <div class="chapters-grid">
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="childhood"
+          >
+            <div class="chapter-icon">🌱</div>
+            <h3 class="chapter-title">Childhood</h3>
+            <p class="chapter-description">
+              Early memories, family, and growing up
+            </p>
+          </div>
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="youth"
+          >
+            <div class="chapter-icon">📚</div>
+            <h3 class="chapter-title">Youth & School</h3>
+            <p class="chapter-description">
+              Education, friendships, discoveries
+            </p>
+          </div>
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="military"
+          >
+            <div class="chapter-icon">⭐</div>
+            <h3 class="chapter-title">Military Career</h3>
+            <p class="chapter-description">Service, work, achievements</p>
+          </div>
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="family"
+          >
+            <div class="chapter-icon">❤️</div>
+            <h3 class="chapter-title">Family Love</h3>
+            <p class="chapter-description">Marriage, children, relationships</p>
+          </div>
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="hobbies"
+          >
+            <div class="chapter-icon">🎨</div>
+            <h3 class="chapter-title">Hobbies Passions</h3>
+            <p class="chapter-description">Interests, travels, adventures</p>
+          </div>
+          <div
+            class="chapter-card"
+            tabindex="0"
+            onclick="selectChapter(this)"
+            data-chapter="lessons"
+          >
+            <div class="chapter-icon">💡</div>
+            <h3 class="chapter-title">Life Lessons</h3>
+            <p class="chapter-description">Wisdom, advice, reflections</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Photo Gallery</span>
+          <h2 class="section-title">Visually preserve anything</h2>
+        </div>
+        <div class="gallery-grid">
+          <div
+            class="gallery-album"
+            tabindex="0"
+            onclick="openGallery('family')"
+          >
+            <div class="album-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/3586765/pexels-photo-3586765.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="Family Moments"
+                class="album-image"
+              />
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Family Moments</h3>
+            </div>
+          </div>
+          <div class="gallery-album" tabindex="0" onclick="openGallery('work')">
+            <div class="album-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/6980355/pexels-photo-6980355.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="Work & Career"
+                class="album-image"
+              />
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Work & Career</h3>
+            </div>
+          </div>
+          <div
+            class="gallery-album"
+            tabindex="0"
+            onclick="openGallery('travel')"
+          >
+            <div class="album-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/32473548/pexels-photo-32473548.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="Travel Adventures"
+                class="album-image"
+              />
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Travel Adventures</h3>
+            </div>
+          </div>
+          <div
+            class="gallery-album"
+            tabindex="0"
+            onclick="openGallery('occasions')"
+          >
+            <div class="album-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/32435239/pexels-photo-32435239.jpeg?auto=compress&cs=tinysrgb&w=300"
+                alt="Special Occasions"
+                class="album-image"
+              />
+            </div>
+            <div class="album-info">
+              <h3 class="album-title">Special Occasions</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory Wall -->
+    <section id="memories" class="memories-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Memory Wall</span>
+          <h2 class="section-title">Shared memories from loved ones</h2>
+          <p class="section-description">
+            Friends and family share their favorite memories and stories.
+          </p>
+          <button class="add-memory-btn" onclick="openMemoryModal()">
+            Add Your Memory
+          </button>
+        </div>
+        <div class="memories-grid">
+          <div class="memory-card">
+            <div class="memory-author">
+              <img
+                src="https://images.pexels.com/photos/32491221/pexels-photo-32491221.jpeg?auto=compress&cs=tinysrgb&w=100"
+                alt="Sarah Johnson"
+                class="author-photo"
+              />
+              <h4 class="author-name">Sarah Johnson</h4>
+            </div>
+            <p class="memory-text">
+              <span class="quote-mark">"</span>
+              Grandpa always had the best stories during Sunday dinners. His
+              wisdom and humor made every gathering special.
+              <span class="quote-mark">"</span>
+            </p>
+          </div>
+          <div class="memory-card">
+            <div class="memory-author">
+              <img
+                src="https://images.pexels.com/photos/7322368/pexels-photo-7322368.jpeg?auto=compress&cs=tinysrgb&w=100"
+                alt="Michael Chen"
+                class="author-photo"
+              />
+              <h4 class="author-name">Michael Chen</h4>
+            </div>
+            <p class="memory-text">
+              <span class="quote-mark">"</span>
+              I remember how he taught me to fish at the lake. His patience and
+              gentle guidance shaped who I am today.
+              <span class="quote-mark">"</span>
+            </p>
+          </div>
+          <div class="memory-card">
+            <div class="memory-author">
+              <img
+                src="https://images.pexels.com/photos/32467708/pexels-photo-32467708.jpeg?auto=compress&cs=tinysrgb&w=100"
+                alt="Emma Davis"
+                class="author-photo"
+              />
+              <h4 class="author-name">Emma Davis</h4>
+            </div>
+            <p class="memory-text">
+              <span class="quote-mark">"</span>
+              His garden was magical. He showed me how to grow tomatoes and that
+              good things take time.
+              <span class="quote-mark">"</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay" style="display: none">
+      <div class="modal-container">
+        <button
+          class="modal-close"
+          onclick="closeLoginModal()"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <h3 class="modal-title">Private Entry</h3>
+        <form class="modal-form" onsubmit="handleLoginSubmit(event)">
+          <div class="form-group">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input
+              id="loginPassword"
+              type="password"
+              placeholder="Enter your password"
+              class="form-input"
+              required
+            />
+          </div>
+          <button type="submit" class="form-submit-btn">
+            Access Private Area
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Memory Modal -->
+    <div id="memoryModal" class="modal-overlay" style="display: none">
+      <div class="modal-container memory-modal">
+        <button
+          class="modal-close"
+          onclick="closeMemoryModal()"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <h3 class="modal-title">Share a Memory</h3>
+        <form class="modal-form" onsubmit="handleMemorySubmit(event)">
+          <div class="form-group">
+            <label for="memoryName" class="form-label"
+              >Your Name (Optional)</label
+            >
+            <input
+              id="memoryName"
+              type="text"
+              placeholder="Enter your name"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="memoryText" class="form-label">Your Memory</label>
+            <textarea
+              id="memoryText"
+              placeholder="Share your favorite memory or story about grandfather..."
+              class="form-textarea"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="memoryPhoto" class="form-label">Photo (Optional)</label>
+            <input
+              id="memoryPhoto"
+              type="file"
+              accept="image/*"
+              class="form-file-input"
+            />
+          </div>
+          <button type="submit" class="form-submit-btn">Submit Memory</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
