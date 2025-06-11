@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Life Story - Lim Lay Yew</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Crimson+Text:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="life-story.css" />
+  </head>
+  <body>
+    <!-- Fixed Header -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="avatar-circle">G</div>
+          <h1 class="site-title">Lim Lay Yew</h1>
+        </div>
+        <nav class="main-navigation">
+          <a href="index.html" class="nav-link">← Back to Home</a>
+          <a href="#sections" class="nav-link">Life Chapters</a>
+        </nav>
+        <div class="progress-indicator">
+          <span class="progress-text"
+            >Your progress: <span id="progressPercentage">0</span>%
+            completed</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Progress Bar Section -->
+    <section class="progress-section">
+      <div class="progress-container">
+        <h1 class="page-title">My Life Story</h1>
+        <p class="page-subtitle">
+          Share your memories, experiences, and wisdom for future generations
+        </p>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+          </div>
+          <div class="progress-stats">
+            <span id="progressStats">0 of 24 questions completed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Life Story Sections -->
+    <main id="sections" class="life-sections">
+      <div class="sections-container">
+        <!-- Childhood Section -->
+        <section class="life-section" data-section="childhood">
+          <div class="section-header">
+            <div class="section-icon">🌱</div>
+            <div class="section-info">
+              <h2 class="section-title">Childhood</h2>
+              <p class="section-subtitle">
+                Early memories, family, and growing up
+              </p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="childhood-1">
+              <div class="question-content">
+                <h3 class="question-title">Where and when were you born?</h3>
+                <p class="question-hint">
+                  Tell us about your birthplace and early years
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="childhood-2">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What are your earliest childhood memories?
+                </h3>
+                <p class="question-hint">
+                  Share your most vivid early memories
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="childhood-3">
+              <div class="question-content">
+                <h3 class="question-title">
+                  Tell us about your family and siblings
+                </h3>
+                <p class="question-hint">
+                  Describe your parents, brothers, sisters, and family life
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="childhood-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What games and activities did you enjoy?
+                </h3>
+                <p class="question-hint">
+                  Favorite childhood games, toys, and pastimes
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div
+              class="question-card memo-card"
+              data-question-id="childhood-memo"
+            >
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional childhood memories or thoughts
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Youth & School Section -->
+        <section class="life-section" data-section="youth">
+          <div class="section-header">
+            <div class="section-icon">📚</div>
+            <div class="section-info">
+              <h2 class="section-title">Youth & School</h2>
+              <p class="section-subtitle">
+                Education, friendships, discoveries
+              </p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="youth-1">
+              <div class="question-content">
+                <h3 class="question-title">What schools did you attend?</h3>
+                <p class="question-hint">
+                  Tell us about your educational journey
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="youth-2">
+              <div class="question-content">
+                <h3 class="question-title">Who were your closest friends?</h3>
+                <p class="question-hint">
+                  Share memories of your school friendships
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="youth-3">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What were your favorite subjects?
+                </h3>
+                <p class="question-hint">
+                  Subjects you loved and teachers you remember
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="youth-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What did you want to be when you grew up?
+                </h3>
+                <p class="question-hint">
+                  Your childhood dreams and aspirations
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card memo-card" data-question-id="youth-memo">
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional memories from your school years
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Military Career Section -->
+        <section class="life-section" data-section="military">
+          <div class="section-header">
+            <div class="section-icon">⭐</div>
+            <div class="section-info">
+              <h2 class="section-title">Military Career</h2>
+              <p class="section-subtitle">Service, work, achievements</p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="military-1">
+              <div class="question-content">
+                <h3 class="question-title">When and where did you serve?</h3>
+                <p class="question-hint">
+                  Your military service dates and locations
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="military-2">
+              <div class="question-content">
+                <h3 class="question-title">What was your role and rank?</h3>
+                <p class="question-hint">
+                  Your duties, responsibilities, and achievements
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="military-3">
+              <div class="question-content">
+                <h3 class="question-title">
+                  Share a memorable military experience
+                </h3>
+                <p class="question-hint">A story from your time in service</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="military-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  How did military service shape you?
+                </h3>
+                <p class="question-hint">Lessons learned and personal growth</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div
+              class="question-card memo-card"
+              data-question-id="military-memo"
+            >
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional thoughts about your military experience
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Family Love Section -->
+        <section class="life-section" data-section="family">
+          <div class="section-header">
+            <div class="section-icon">❤️</div>
+            <div class="section-info">
+              <h2 class="section-title">Family Love</h2>
+              <p class="section-subtitle">Marriage, children, relationships</p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="family-1">
+              <div class="question-content">
+                <h3 class="question-title">How did you meet your spouse?</h3>
+                <p class="question-hint">
+                  The story of your first meeting and courtship
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="family-2">
+              <div class="question-content">
+                <h3 class="question-title">Tell us about your wedding day</h3>
+                <p class="question-hint">
+                  Share memories from your special day
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="family-3">
+              <div class="question-content">
+                <h3 class="question-title">What are your children like?</h3>
+                <p class="question-hint">
+                  Describe each of your children and their personalities
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="family-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What family traditions do you cherish?
+                </h3>
+                <p class="question-hint">
+                  Special family customs and celebrations
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card memo-card" data-question-id="family-memo">
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional family memories or thoughts
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hobbies & Passions Section -->
+        <section class="life-section" data-section="hobbies">
+          <div class="section-header">
+            <div class="section-icon">🎨</div>
+            <div class="section-info">
+              <h2 class="section-title">Hobbies & Passions</h2>
+              <p class="section-subtitle">Interests, travels, adventures</p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="hobbies-1">
+              <div class="question-content">
+                <h3 class="question-title">What are your favorite hobbies?</h3>
+                <p class="question-hint">Activities you love and enjoy doing</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="hobbies-2">
+              <div class="question-content">
+                <h3 class="question-title">Where have you traveled?</h3>
+                <p class="question-hint">
+                  Memorable trips and places you've visited
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="hobbies-3">
+              <div class="question-content">
+                <h3 class="question-title">What skills have you learned?</h3>
+                <p class="question-hint">
+                  Talents and abilities you've developed
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="hobbies-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  Share an adventure or exciting experience
+                </h3>
+                <p class="question-hint">
+                  A thrilling or memorable moment in your life
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div
+              class="question-card memo-card"
+              data-question-id="hobbies-memo"
+            >
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional thoughts about your hobbies and interests
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Life Lessons Section -->
+        <section class="life-section" data-section="lessons">
+          <div class="section-header">
+            <div class="section-icon">💡</div>
+            <div class="section-info">
+              <h2 class="section-title">Life Lessons</h2>
+              <p class="section-subtitle">Wisdom, advice, reflections</p>
+            </div>
+            <div class="section-progress">
+              <span class="completed-count">0/4</span>
+            </div>
+          </div>
+          <div class="questions-grid">
+            <div class="question-card" data-question-id="lessons-1">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What's the most important lesson you've learned?
+                </h3>
+                <p class="question-hint">Share your greatest life wisdom</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="lessons-2">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What advice would you give to young people?
+                </h3>
+                <p class="question-hint">Your wisdom for the next generation</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="lessons-3">
+              <div class="question-content">
+                <h3 class="question-title">What are you most proud of?</h3>
+                <p class="question-hint">
+                  Your greatest accomplishments and achievements
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div class="question-card" data-question-id="lessons-4">
+              <div class="question-content">
+                <h3 class="question-title">
+                  What legacy do you want to leave behind?
+                </h3>
+                <p class="question-hint">How you want to be remembered</p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon incomplete">○</span>
+              </div>
+            </div>
+            <div
+              class="question-card memo-card"
+              data-question-id="lessons-memo"
+            >
+              <div class="question-content">
+                <h3 class="question-title">✏️ Add a Memo</h3>
+                <p class="question-hint">
+                  Share any additional wisdom or reflections
+                </p>
+              </div>
+              <div class="question-status">
+                <span class="status-icon memo">+</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Question Answer Modal -->
+    <div id="questionModal" class="modal-overlay" style="display: none">
+      <div class="modal-container question-modal">
+        <button
+          class="modal-close"
+          onclick="closeQuestionModal()"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalQuestionTitle"></h3>
+          <p class="modal-subtitle" id="modalQuestionHint"></p>
+        </div>
+        <form class="modal-form" onsubmit="handleQuestionSubmit(event)">
+          <input type="hidden" id="currentQuestionId" value="" />
+
+          <div class="form-group">
+            <label for="answerText" class="form-label">Your Answer</label>
+            <textarea
+              id="answerText"
+              placeholder="Share your thoughts, memories, and experiences..."
+              class="form-textarea answer-textarea"
+              rows="6"
+            ></textarea>
+          </div>
+
+          <div class="media-upload-section">
+            <h4 class="media-section-title">Add Media (Optional)</h4>
+
+            <div class="media-upload-grid">
+              <div class="form-group">
+                <label for="answerPhoto" class="form-label">
+                  📷 Add Photo
+                </label>
+                <input
+                  id="answerPhoto"
+                  type="file"
+                  accept="image/*"
+                  class="form-file-input"
+                />
+                <div
+                  id="photoPreview"
+                  class="media-preview"
+                  style="display: none"
+                >
+                  <img
+                    id="previewImage"
+                    src=""
+                    alt="Preview"
+                    class="preview-image"
+                  />
+                  <button
+                    type="button"
+                    class="remove-media-btn"
+                    onclick="removePhoto()"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="answerAudio" class="form-label">
+                  🎙️ Add Audio
+                </label>
+                <div class="audio-controls">
+                  <input
+                    id="answerAudio"
+                    type="file"
+                    accept="audio/*"
+                    class="form-file-input"
+                    style="display: none"
+                  />
+                  <button
+                    type="button"
+                    class="audio-record-btn"
+                    onclick="startRecording()"
+                  >
+                    🎤 Record Audio
+                  </button>
+                  <button
+                    type="button"
+                    class="audio-upload-btn"
+                    onclick="document.getElementById('answerAudio').click()"
+                  >
+                    📁 Upload Audio
+                  </button>
+                </div>
+                <div
+                  id="audioPreview"
+                  class="media-preview"
+                  style="display: none"
+                >
+                  <audio
+                    id="previewAudio"
+                    controls
+                    class="preview-audio"
+                  ></audio>
+                  <button
+                    type="button"
+                    class="remove-media-btn"
+                    onclick="removeAudio()"
+                  >
+                    Remove
+                  </button>
+                </div>
+                <div
+                  id="recordingIndicator"
+                  class="recording-indicator"
+                  style="display: none"
+                >
+                  🔴 Recording...
+                  <button type="button" onclick="stopRecording()">Stop</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="secondary-btn"
+              onclick="closeQuestionModal()"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="primary-btn">Save Answer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Answer Preview Modal -->
+    <div id="previewModal" class="modal-overlay" style="display: none">
+      <div class="modal-container preview-modal">
+        <button
+          class="modal-close"
+          onclick="closePreviewModal()"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <div class="modal-header">
+          <h3 class="modal-title" id="previewQuestionTitle"></h3>
+          <div class="answer-completed-badge">✓ Completed</div>
+        </div>
+        <div class="answer-preview-content">
+          <div class="answer-text-preview" id="previewAnswerText"></div>
+          <div class="answer-media-preview" id="previewAnswerMedia"></div>
+        </div>
+        <div class="modal-actions">
+          <button
+            type="button"
+            class="secondary-btn"
+            onclick="closePreviewModal()"
+          >
+            Close
+          </button>
+          <button type="button" class="primary-btn" onclick="editAnswer()">
+            Edit Answer
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="life-story.js"></script>
+  </body>
+</html>
